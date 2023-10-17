@@ -1,4 +1,4 @@
-# Jogo-Python
+# Snake-Game
  criando meu primeiro jogo em Python utilizando Pygame
 
  Sinta-se livre para dar sujestões e melhorias sobre o código
