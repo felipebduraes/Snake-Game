@@ -41,7 +41,7 @@ def aumenta_cobra(lista_cobra):
         #XeY[0] = x
         #XeY[1] = y
 
-        pygame.draw.rect(tela, (0,255,0), (XeY[0], XeY[1], 20, 20))
+        pygame.draw.rect(tela, (147,103,191), (XeY[0], XeY[1], 20, 20))
 
 
 def reiniciar_jogo():
@@ -58,7 +58,7 @@ def reiniciar_jogo():
 
 while True:
     relogio.tick(30)
-    tela.fill((255,255,255))
+    tela.fill((124,217,17))
     
     mensagem = f'Pontos: {pontos}'
     texto_formatado = fonte.render(mensagem, True, (0,0,0))
@@ -98,7 +98,7 @@ while True:
     x_cobra = x_cobra + x_controle
     y_cobra = y_cobra + y_controle
 
-    cobra = pygame.draw.rect(tela, (0,255,0), (x_cobra,y_cobra,20,20))
+    cobra = pygame.draw.rect(tela, (147,103,191), (x_cobra,y_cobra,20,20))
     maca = pygame.draw.rect(tela, (255,0,0), (x_maca,y_maca,20,20))
     
     if cobra.colliderect(maca):
