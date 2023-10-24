@@ -4,13 +4,17 @@ from sys import exit
 from random import randint
 
 pygame.init()
-
-pygame.mixer.music.set_volume(0.1)
+# Música de fundo do jogo e controle de volume
+pygame.mixer.music.set_volume(0.3)
 musica_de_fundo = pygame.mixer.music.load('audio/Mind-Bender.mp3')
 pygame.mixer.music.play(-1)
 
+# Som de colisao
 barulho_colisao = pygame.mixer.Sound('audio/smw_coin.wav')
+# Som de game over
+derrota = pygame.mixer.Sound('audio/defeat.mp3')
 
+# Dimensões do display da tela
 largura = 640
 altura = 480
 
@@ -123,6 +127,7 @@ while True:
         morreu = True
         while morreu:
             tela.fill((255,255,255))
+            derrota.play()
             for event in pygame.event.get():
                 if event.type ==QUIT:
                     pygame.quit()
