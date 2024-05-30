@@ -22,13 +22,15 @@ velocidade = 10
 x_controle = velocidade
 y_controle = 0
 
-
+#Tamanho da cobra
 x_cobra = int(largura/2) 
 y_cobra = int(altura/2)
 
+#Tamanho da maça
 x_maca = randint(40, 600)
 y_maca = randint(50, 430)
 
+# Pontuação inicial, e a fonte e tamanho da letra marcando a pontuação
 pontos = 0
 fonte = pygame.font.SysFont('arial', 40, bold=True, italic=True)
 
@@ -39,13 +41,14 @@ lista_cobra = []
 comprimento_inicial = 5
 morreu = False
 
+# Codigos para aumentar o tamanho da cobra
 def aumenta_cobra(lista_cobra):
     for XeY in lista_cobra:
        
 
         pygame.draw.rect(tela, (147,103,191), (XeY[0], XeY[1], 20, 20))
 
-
+# Codigos para reiniciar o jogo e zerar as variaveis cobra e pontuação
 def reiniciar_jogo():
     global pontos, comprimento_inicial, x_cobra, y_cobra, lista_cobra, lista_cabeca, x_maca, y_maca, morreu
     pontos = 0
@@ -69,7 +72,8 @@ while True:
         if event.type == QUIT:
             pygame.quit()
             exit()
-        
+            
+        # codigos para movimentar a cobra com as teclas WASD
         if event.type == KEYDOWN:
             if event.key == K_a:
                 if x_controle == velocidade:
