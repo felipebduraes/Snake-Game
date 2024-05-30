@@ -41,9 +41,7 @@ morreu = False
 
 def aumenta_cobra(lista_cobra):
     for XeY in lista_cobra:
-        #XeY = [x, y]
-        #XeY[0] = x
-        #XeY[1] = y
+       
 
         pygame.draw.rect(tela, (147,103,191), (XeY[0], XeY[1], 20, 20))
 
@@ -156,4 +154,4 @@ while True:
     tela.blit(texto_formatado, (450,40))
 
     
-    pygame.display.update()
+    pygame.display.flip()
